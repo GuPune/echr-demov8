@@ -31,6 +31,7 @@ class AgendaController extends RbacController
             ],
         ];
     }
+    
 
     /**
      * Lists all Agenda models.
