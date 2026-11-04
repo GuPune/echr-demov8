@@ -1,7 +1,6 @@
 Options -Indexes
 
 RewriteEngine on
-RewriteBase /echr/
 RewriteRule ^(.*)$ web/$1 [L]
 
 #<Files ~ "(^\.|\/\.)">

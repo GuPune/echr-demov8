@@ -10,6 +10,11 @@ use yii\helpers\FormatConverter;
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
+// Base URL ของแอป คำนวณจากตำแหน่ง index.php (ตัด /web ออก) เพื่อให้รันได้ทุกชื่อโฟลเดอร์
+// เช่น /echr, /echr-demov8 หรือ '' (virtual host)
+$baseUrl = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? ''));
+$baseUrl = rtrim(preg_replace('#/web$#', '', $baseUrl), '/.');
+
 $config = [
     'id' => 'echr',
     'name' => 'KKUEC Online Submission',
@@ -130,7 +135,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '9a7QGx5jq6ZRYWTVdGugAtfwDwFQA9oJ',
-            'baseUrl' => '/echr',
+            'baseUrl' => $baseUrl,
             'csrfParam' => '_echrCSRF',
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
@@ -189,7 +194,7 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'baseUrl' => '/echr',
+            'baseUrl' => $baseUrl,
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule',
@@ -235,18 +240,22 @@ $config = [
             'bundles' => [
                 'yii\web\JqueryAsset' => [
                     'sourcePath' => null, // do not publish the bundle
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
                     'js' => [
-                        '/echr/remark/global/vendor/jquery/jquery.js',
+                        'remark/global/vendor/jquery/jquery.js',
                     ]
                 ],
                 'yii\bootstrap\BootstrapAsset' => [
                     'depends' => ['yii\web\JqueryAsset'],
                     'sourcePath' => null, // do not publish the bundle
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
                     'js' => [
-                        '/echr/remark/global/vendor/bootstrap/bootstrap.js',
+                        'remark/global/vendor/bootstrap/bootstrap.js',
                     ],
                     'css' => [
-                        '/echr/remark/global/css/bootstrap.css',
+                        'remark/global/css/bootstrap.css',
                     ]
                 ],
                 'yii\bootstrap\BootstrapPluginAsset' => FALSE,
