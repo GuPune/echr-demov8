@@ -52,7 +52,7 @@
     },
     "autoload": {
         "classmap": [
-            "vendor/phpdocx/Classes/Phpdocx"
+            // "vendor/phpdocx/Classes/Phpdocx"
         ]
     },
     "config": {
