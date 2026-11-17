@@ -20,7 +20,7 @@ $currentRole = Yii::$app->session->get('currentRole');
         </button>
         <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
             <?=
-            Html::img("@web/images/logo.png", [
+            Html::img("@web/images/logo-mbu.png", [
                 'class' => 'navbar-brand-logo',
                 'title' => 'Submission Online',
                 'style' => 'height: 55px;margin-top: -15px;'
@@ -212,7 +212,7 @@ $currentRole = Yii::$app->session->get('currentRole');
 
             <div class="navbar-brand navbar-brand-left padding-20" data-toggle="gridmenu">
                 <?=
-                Html::img("@web/images/logo.png", [
+                Html::img("@web/images/logo-mbu.png", [
                     'class' => 'navbar-brand-logo',
                     'title' => 'Submission Online',
                     'style' => 'height: 55px;margin-top: -15px;'
