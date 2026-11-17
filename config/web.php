@@ -17,7 +17,7 @@ $baseUrl = rtrim(preg_replace('#/web$#', '', $baseUrl), '/.');
 
 $config = [
     'id' => 'echr',
-    'name' => 'KKUEC Online Submission',
+    'name' => 'MBUEC Online Submission',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'languagesDispatcher', 'devicedetect'],
     'language' => 'th-TH',

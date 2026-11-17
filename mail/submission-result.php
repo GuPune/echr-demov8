@@ -39,7 +39,7 @@ if (isset($ma)) {
     Board meeting no <?= $ma->meeting->yearNo ?> Date <?= $meetingDate ?> / <?= $ma->fullTitle ?> 
     <?php endif; ?>
     Results <?= $submission->resolutionLabel ?>
-This is an initial notification. The KKUEC office will send the endorsed result notification to you online.
+This is an initial notification. The MBUEC office will send the endorsed result notification to you online.
 </p>
 <p>
 <font style="color: red"><?= $submission->contactLetterEng; ?></font>    
