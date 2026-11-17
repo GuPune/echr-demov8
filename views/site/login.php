@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <div class="panel-body text-left">
         <div class="brand">
-            <div class="text-center"><?= Html::img('@web/images/logo.png', ['width' => 90]); ?></div>
+            <div class="text-center"><?= Html::img('@web/images/logo-mbu.png', ['width' => 90]); ?></div>
             <div class="brand-text font-size-18 text-center text-primary"><?= yii::t('app', 'Research Ethics Review: Online Submission System'); ?></div>
             <!--<div class="font-size-20 font-weight-900">CORE</div>-->
         </div>
