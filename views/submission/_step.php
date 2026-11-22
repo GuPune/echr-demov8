@@ -63,8 +63,11 @@ use yii\bootstrap\Modal;
             <div class="pearls row">
                 <?php foreach ($models as $model): 
                     $customValue = \app\models\Submission::getCustomStatusValueStep($model);
+                    // บางขั้นตอนไม่มีช่วงสถานะ (คืนค่า null) ต้องเช็กก่อนอ่าน min/max
+                    $isCurrent = $model == $sc->status
+                        || (isset($customValue) && $customValue['min'] <= $sc->status && $customValue['max'] >= $sc->status);
                     ?>
-                    <div class="pearl col-xs-3 <?php if (($model == $sc->status || ($customValue['min'] <= $sc->status && $customValue['max'] >= $sc->status ))) { ?> current <?php } else { ?>
+                    <div class="pearl col-xs-3 <?php if ($isCurrent) { ?> current <?php } else { ?>
 
         <?php if ((!isset($customValue) && $sc->status >= $model) || (isset($customValue) && ($sc->status >= $customValue['min']))) { ?>
                              done 
@@ -72,7 +75,7 @@ use yii\bootstrap\Modal;
                          }
                      }
                      ?>"  text-center">
-                        <div class="pearl-icon"><?php if (($model == $sc->status || ($customValue['min'] <= $sc->status && $customValue['max'] >= $sc->status ))) { ?> <i class="glyphicon glyphicon-edit" aria-hidden="true"></i> <?php } else { ?>
+                        <div class="pearl-icon"><?php if ($isCurrent) { ?> <i class="glyphicon glyphicon-edit" aria-hidden="true"></i> <?php } else { ?>
 
         <?php if ((!isset($customValue) && $sc->status >= $model) || (isset($customValue) && ($sc->status >= $customValue['min']))) { ?>
                              <i class="glyphicon glyphicon-check" aria-hidden="true"></i> 
