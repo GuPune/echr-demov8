@@ -10,7 +10,7 @@ $meetingdate = isset($submission->meeting_plan_date) ? \Yii::$app->formatter->as
 $senddate = isset($submission->send_plan_date) ? \Yii::$app->formatter->asDate($submission->send_plan_date, 'php:d ') . Yii::$app->util->thaiMonths[\Yii::$app->formatter->asDate($submission->send_plan_date, 'php:n')] . ' ' . (\Yii::$app->formatter->asDate($submission->send_plan_date, 'php:Y') + 543) : "";
 
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p><?= Yii::t('app', 'เรียน อาจารย์ที่เคารพ') ?></p>
 <h4><?= Yii::t('app', 'เรื่อง แจ้งขอให้เลือกประเภทการพิจารณาโครงการวิจัย') ?></h4>

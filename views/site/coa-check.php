@@ -13,7 +13,7 @@ use miloschuman\highcharts\Highcharts;
 <div class="forget-password col-md-12 col-md-offset-2">
     <div class="panel" id="exampleWizardFormContainer"><br>
         <div class="panel-heading">
-            <div class="text-center"><?= Html::img('@web/images/logo.png', ['height' => 80]); ?></div>
+            <div class="text-center"><?= Html::img('@web/images/logo-mbu.png', ['height' => 80]); ?></div>
             <div class="brand-text font-size-18 text-center text-primary"><?= Yii::$app->name ?></div>
         </div>
         <div class="panel-body">

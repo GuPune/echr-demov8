@@ -11,7 +11,7 @@ use yii\helpers\Url;
         color:#0000ff;
     }
 </style>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/web/images/logo-mail.png', true) ?>"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="background-color: #2f5597;width: auto;text-align: center; height: 50px; padding: 20px;font-size: 30px;"><font style="font-weight: bold; color:#ffffff;">สำหรับการเป็น “ผู้ร่วมวิจัย”</font></div>
 <font style="font-weight:bold; color: #0000cc;">
 <p>เรียน <?= $researcher->person->fullName ?></p>

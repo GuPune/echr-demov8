@@ -9,7 +9,7 @@ $lc = Yii::$app->formatter->locale;
 Yii::$app->formatter->locale = 'th';
 
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p><?= Yii::t('app', 'เรียน') ?> <?= $submission->responsiblePerson->person->fullName ?></p>
 <p><?= Yii::t('app', 'เรื่อง') ?> <?= \Yii::t('app', 'แจ้งให้เจ้าหน้าที่ทำการกำหนดวาระการประชุมให้สำหรับโครงการที่ไม่มีการแก้ไขภายในระยะเวลา 90 วัน (ผลการพิจารณา C)') ?></p>

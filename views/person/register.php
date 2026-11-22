@@ -31,7 +31,7 @@ use yii\helpers\Url;
 //                ]);
                 ?>
             </div>
-            <div class="text-center"><?= Html::img('@web/images/logo.png', ['height' => 80]); ?></div>
+            <div class="text-center"><?= Html::img('@web/images/logo-mbu.png', ['height' => 80]); ?></div>
             <div class="brand-text font-size-18 text-center text-primary"><?= Yii::$app->name ?></div>
             <h3 class="panel-title text-center"><?= Yii::t('app', 'ลงทะเบียนผู้ใช้งาน') ?></h3>
         </div>

@@ -12,7 +12,7 @@ use yii\helpers\Url;
 $typeName = isset($training->trainingType) ? $training->trainingType->name : ($training->name_thai_course ?: '-');
 $expireText = !empty($training->expire_date) ? Yii::$app->formatter->asDate($training->expire_date) : '-';
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p>เรียน <?= $person->fullName ?></p>
 <h4>เรื่อง แจ้งเตือนเอกสารการอบรมใกล้หมดอายุ</h4>

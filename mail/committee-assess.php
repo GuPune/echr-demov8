@@ -7,7 +7,7 @@ use yii\helpers\Url;
 /* @var $message \yii\mail\BaseMessage instance of newly created mail message */
 
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p style="text-indent: 50px;">
     กรรมการ <?= $model->person->fullName ?> ได้ส่งผลประเมิน (<?= $model->submission->submissionType->name; ?>)

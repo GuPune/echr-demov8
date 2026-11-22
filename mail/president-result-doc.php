@@ -13,7 +13,7 @@ if (isset($submission->president_person)) {
 }
 
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <h4><?= \Yii::t('app', 'เรื่อง ขอความอนุเคราะห์ลงนามหนังสือแจ้งผลพิจารณาโครงการวิจัย [{1}] [{0}] {2} ', [$submission->submissionType->name, $submission->project->project_code, $edit]); ?></h4>
 <p><?= Yii::t('app', 'เรียน ') ?>  <?= $namePresident; ?></p>

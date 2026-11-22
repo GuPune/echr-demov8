@@ -7,7 +7,7 @@ use yii\helpers\Url;
 /* @var $message \yii\mail\BaseMessage instance of newly created mail message */
 $url = Url::to(['person/reset-password', 'token' => $user->password_reset_token], TRUE);
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p>เรียน <?= $user->person->fullName ?></p>
 <p>โปรดคลิกที่ลิงก์ด้านล่างนี้เพื่อตั้งรหัสผ่านใหม่</p>

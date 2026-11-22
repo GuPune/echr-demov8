@@ -6,7 +6,7 @@ use yii\helpers\Url;
 /* @var $this \yii\web\View view component instance */
 /* @var $message \yii\mail\BaseMessage instance of newly created mail message */
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p>เรียน <?= $ld->person->fullNameWithEng ?></p>
 <p>เรื่อง แจ้งเลขที่โครงการวิจัยที่ MOU กับ CREC (<?= isset($submission->project->project_code) ? $submission->project->project_code : "" ?> <?= isset($submission->submission_number) ? ' : ' .$submission->submission_number : "" ?> )</p>

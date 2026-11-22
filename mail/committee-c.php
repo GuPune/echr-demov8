@@ -10,7 +10,7 @@ Yii::$app->formatter->locale = 'th';
 $corDate = Yii::$app->formatter->asDate($submission->correspondence_at, 'php:d F ') . Yii::$app->formatter->asDate($submission->correspondence_at, 'php:Y');
 
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p><?= Yii::t('app', 'เรียน') ?> <?= $submission->projectLeader->person->fullName ?></p>
 <p><?= Yii::t('app', 'เรื่อง') ?> <?= \Yii::t('app', 'ผลการประเมินด้านจริยธรรมการวิจัยในมนุษย์') ?></p>

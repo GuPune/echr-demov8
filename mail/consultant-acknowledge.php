@@ -11,7 +11,7 @@ use yii\helpers\Url;
         color:#c55a11;
     }
 </style>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mail.png', true) ?>"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="background-color: #c55a11;width: auto;text-align: center; height: 50px; padding: 20px;font-size: 30px;"><font style="font-weight: bold; color:#ffffff;">สำหรับการเป็น “ที่ปรึกษา”</font></div>
 <font style="font-weight:bold; color: #c55a11;">
 <p>เรียน <?= $consultant->person->fullName ?></p>

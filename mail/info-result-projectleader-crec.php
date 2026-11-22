@@ -11,7 +11,7 @@ $reCrecDate = isset($sendRedate) ? \Yii::$app->formatter->asDate($sendRedate, 'p
 /* @var $this \yii\web\View view component instance */
 /* @var $message \yii\mail\BaseMessage instance of newly created mail message */
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p>เรียน  <?= $submission->projectLeader->person->fullName ?></p>
 <h4>เรื่อง แจ้งผลการพิจารณาจริยธรรมการวิจัยในมนุษย์ โครงการวิจัยที่เข้าข่าย MOU กับ CREC</h4>

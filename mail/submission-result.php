@@ -12,7 +12,7 @@ if (isset($ma)) {
 } 
 
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p>เรียน <?= $submission->projectLeader->person->fullName ?></p>
 <p>เรื่อง <?= \Yii::t('app', 'ผลการประเมินด้านจริยธรรมการวิจัยในมนุษย์ภายหลังการประชุมครั้งที่ {0}', [isset($ma) ? $ma->meeting->yearNo : ""]) ?></p>

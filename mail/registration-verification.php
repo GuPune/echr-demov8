@@ -7,7 +7,7 @@ use yii\helpers\Url;
 /* @var $message \yii\mail\BaseMessage instance of newly created mail message */
 $url = Url::to(['person/verify-email', 'token' => $user->verify_token], TRUE);
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p>เรียน <?= isset($user->person->fullName) ? $user->person->fullName : "" ?></p>
 <p>ขอบคุณสำหรับการลงทะเบียนระบบ Submission Online โปรดคลิกที่ลิงก์ด้านล่างนี้เพื่อยืนยันอีเมลที่ให้ไว้ จึงจะสามารถเข้าใช้งานระบบได้</p>

@@ -15,7 +15,7 @@ use yii\helpers\Url;
 <div class="forget-password col-md-12 col-md-offset-3">
     <div class="panel" id="exampleWizardFormContainer">
         <div class="panel-heading">
-            <div class="text-center"><?= Html::img('@web/images/logo.png', ['height' => 80]); ?></div>
+            <div class="text-center"><?= Html::img('@web/images/logo-mbu.png', ['height' => 80]); ?></div>
             <div class="brand-text font-size-18 text-center text-primary"><?= Yii::$app->name ?></div>
             <h3 class="panel-title text-center"><?= Yii::t('app', 'ลืมรหัสผ่าน') ?></h3>
         </div>

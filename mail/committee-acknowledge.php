@@ -28,7 +28,7 @@ if (isset($submission->refSubmission)) {
     }
 }
 ?>
-<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo.png', true) ?>" width="90"></div>
+<div style="text-align: center"><img src="<?= Url::to(Yii::$app->urlManager->baseUrl . '/images/logo-mbu.png', true) ?>" width="90"></div>
 <div style="text-align: center; font-size: 18px"><?= Yii::$app->name ?></div>
 <p><?= Yii::t('app', 'เรียน อาจารย์ {0} ที่เคารพ', [$committee->person->fullName]) ?></p>
 <h4><?= $title ?></h4>
