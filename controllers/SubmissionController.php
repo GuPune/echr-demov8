@@ -4639,7 +4639,7 @@ js;
         return array_merge($submissionDocs, $docs);
     }
 
-    public function getSubmissionCommitteeDocs($submission = NULL, $sCommitteeId) {
+    public function getSubmissionCommitteeDocs($submission, $sCommitteeId) {
 //        $currentRole = \Yii::$app->session->get('currentRole');
 
         $docTypes = DocumentSubmissionType::find()->isDeleted(FALSE)->submissionType($submission->submission_type_id)->submissionTypeRole(\app\models\Role::COMMITTEE)->indexBy('id')->all();

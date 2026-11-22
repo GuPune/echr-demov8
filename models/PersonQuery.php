@@ -56,22 +56,22 @@ class PersonQuery extends \yii\db\ActiveQuery {
         return $this->andWhere(['person.email' => $email]);
     }
 
-    public function isInProject($in = TRUE, $project) {
+    public function isInProject($in, $project) {
         $subQuery = (new Query())->select('id')->from('project_researcher')->andWhere(['deleted' => FALSE, 'project_id' => $project])->andWhere('project_researcher.person_id=person.id')->andWhere(['project_researcher.acknowledge_status' => [ProjectResearcher::STATUS_PENDING_ACK, ProjectResearcher::STATUS_ACCEPTED]]);
         return $this->andWhere([($in ? 'EXISTS' : 'NOT EXISTS'), $subQuery]);
     }
 
-    public function isInSubmission($in = TRUE, $submission) {
+    public function isInSubmission($in, $submission) {
         $subQuery = (new Query())->select('id')->from('project_researcher')->andWhere(['deleted' => FALSE, 'submission_id' => $submission])->andWhere('project_researcher.person_id=person.id')->andWhere(['project_researcher.acknowledge_status' => [ProjectResearcher::STATUS_PENDING_ACK, ProjectResearcher::STATUS_ACCEPTED]]);
         return $this->andWhere([($in ? 'EXISTS' : 'NOT EXISTS'), $subQuery]);
     }
 
-    public function isInProjectConsultant($in = TRUE, $project) {
+    public function isInProjectConsultant($in, $project) {
         $subQuery = (new Query())->select('id')->from('project_consultant')->andWhere(['deleted' => FALSE, 'project_id' => $project])->andWhere('project_consultant.person_id=person.id')->andWhere(['project_consultant.acknowledge_status' => [ProjectConsultant::STATUS_PENDING_ACK, ProjectConsultant::STATUS_ACCEPTED]]);
         return $this->andWhere([($in ? 'EXISTS' : 'NOT EXISTS'), $subQuery]);
     }
 
-    public function isInSubmissionConsultant($in = TRUE, $submission) {
+    public function isInSubmissionConsultant($in, $submission) {
         $subQuery = (new Query())->select('id')->from('project_consultant')->andWhere(['deleted' => FALSE, 'submission_id' => $submission])->andWhere('project_consultant.person_id=person.id')->andWhere(['project_consultant.acknowledge_status' => [ProjectConsultant::STATUS_PENDING_ACK, ProjectConsultant::STATUS_ACCEPTED]]);
         return $this->andWhere([($in ? 'EXISTS' : 'NOT EXISTS'), $subQuery]);
     }

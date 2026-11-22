@@ -760,7 +760,7 @@ class QuestionnaireAnswerController extends RbacController {
      * @return QuestionnaireAnswer the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function getSubmissionDocs($submission = NULL, $sCommitteeId, $cpId = NULL) {
+    public function getSubmissionDocs($submission, $sCommitteeId, $cpId = NULL) {
 //        $currentRole = \Yii::$app->session->get('currentRole');
         $docTypes = [];
         if (isset($cpId)) {

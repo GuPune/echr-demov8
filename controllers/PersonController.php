@@ -1377,7 +1377,7 @@ class PersonController extends RbacController {
         return $this->render('register-complete');
     }
 
-    public function actionSearch($q = null, $submissionId = null, $roleId) {
+    public function actionSearch($q, $submissionId, $roleId) {
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         $p = new Person();
         $out = ['results' => $p];
@@ -1414,7 +1414,7 @@ class PersonController extends RbacController {
         return $out;
     }
 
-    public function actionSearchCoi($q = null, $submissionId = null, $roleId) {
+    public function actionSearchCoi($q, $submissionId, $roleId) {
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         $p = new Person();
         $out = ['results' => $p];
@@ -1440,7 +1440,7 @@ class PersonController extends RbacController {
         return $out;
     }
 
-    public function actionSearchConsultant($q = null, $submissionId = null, $roleId) {
+    public function actionSearchConsultant($q, $submissionId, $roleId) {
 //        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 //        $p = new Person();
 //        $out = ['results' => $p];

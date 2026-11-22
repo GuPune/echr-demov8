@@ -314,7 +314,7 @@ class PersonRoleController extends RbacController {
         ]);
     }
 
-    public function actionSelectPersons($id = null, $personId, $roleId) {
+    public function actionSelectPersons($id, $personId, $roleId) {
         $request = Yii::$app->request;
 //        $time = new \DateTime('now', new \DateTimeZone('UTC'));
         $modelPerson = \app\models\Person::findOne($personId);
