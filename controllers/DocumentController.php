@@ -343,11 +343,14 @@ class DocumentController extends RbacController {
         }
         $endorseMa = $submission->firstEndorseMeetingAgenda;
 
-        if ($lang == Document::LANG_DOM) {
-            $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor($model->templatePathAlias);
-        } else {
-            $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor($model->templatePathAliasEng);
+        $templatePath = $lang == Document::LANG_DOM ? $model->templatePathAlias : $model->templatePathAliasEng;
+        if (!is_file($templatePath)) {
+            throw new NotFoundHttpException(Yii::t('app', 'ไม่พบไฟล์แม่แบบของเอกสาร "{name}" ({file}) กรุณาอัปโหลดไฟล์แม่แบบใหม่', [
+                'name' => $model->name,
+                'file' => basename($templatePath),
+            ]));
         }
+        $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor($templatePath);
 //        $templateProcessor->setValue('jobPosition', htmlentities('&', ENT_XML1));
         $submissionComittee = \app\models\SubmissionCommittee::findOne($submissionComitteeId);
 //        \Yii::$app->formatter->locale = 'en';
