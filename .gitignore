@@ -34,3 +34,5 @@ tests/_output/*
 tests/_support/_generated
 
 /web/tmp/*
+# SMTP credentials
+/config/mail-local.php

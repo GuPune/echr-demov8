@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'adminEmail' => 'echr@kku.ac.th',
-    'adminName' => 'ศูนย์จริยธรรมการวิจัยในมนุษย์ มหาวิทยาลัยขอนแก่น',
+    'adminEmail' => 'ecmbu.no-reply@esubmissionsystem.com',
+    'adminName' => 'ศูนย์จริยธรรมการวิจัยในมนุษย์ มหาวิทยาลัยมหามกุฎราชวิทยาลัย',
     'sendMailCmd' => 'php /app/web/echr/yii email-queue/send-mail',
 //    'dateFormat' => 'd/m/Y',
 //    'dateFormatJs' => 'DD/MM/YYYY',
